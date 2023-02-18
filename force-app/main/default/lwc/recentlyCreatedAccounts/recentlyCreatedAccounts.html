@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title="Recently Created Accounts" icon-name="standard:account">
+        <template if:true={accounts}>
+            <ul>
+                <template for:each={accounts} for:item="account">
+                    <li key={account.Id}>{account.Name}</li>
+                </template>
+            </ul>
+        </template>
+        <template if:false={accounts}>
+            <p>No accounts found.</p>
+        </template>
+    </lightning-card>
+</template>
